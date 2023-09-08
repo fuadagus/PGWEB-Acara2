@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+.judul h1 {
+  text-align: center;
+  padding-bottom: 0.7em;
+}
+.judul h1 span {
+  font-weight: 300;
+  word-spacing: 3px;
+  line-height: 2em;
+  padding-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.judul h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 1px;
+  content: "";
+  left: 50%;
+  margin-left: -30px;
+  background-color: #777;
+}
+
+h3 {
+  text-align:center;
+ 
+  text-transform:uppercase;
+  font-size:26px; letter-spacing:1px;
+  
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 16px 0;
+  grid-gap: 22px;
+}
+
+h3:after, h3:before {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #ccc;
+  background-color:#f8f8f8;
+}
+   
+      
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
         body{
-            padding: 10%;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 5%;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-bottom: 10%; ;
             
         }
         h1{
@@ -28,42 +82,49 @@
             padding: auto;
             width: 100%;
         }
+        .navbar-brand{
+            padding: 10%;
+        }
+        .geo{
+            
+            display: flex;
+        }
     </style>
     <title>PGWEB Acara 2</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-<!-- Make a html and css landing page -->
 
-<!-- Heading -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <ul>
-        <a href="#sejarah">
-            <i class="fa-solid fa-monument"></i>
-            Sejarah</a>
-    </ul>
-    <ul>
-
-        <a href="#legenda">Legenda</a>
-    </ul>
-    <ul>
-        <a href="#sejarah">Sejarah</a>
-    </ul>
-    <ul>
-        <a href="#budaya">Budaya</a>
-    </ul>
+<div class="judul">
+    <h1 id="beranda"><span>Sunrise of Java</span> Kabupaten Banyuwangi <em>Jawa Timur</em> Indonesia</h1>
+  </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#beranda">Beranda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#sejarah">Sejarah <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#legenda">Legenda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#geografi">Geografi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#budaya">Budaya</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <div class="container">
-<section class="alert alert-primary">
 
-    <h1>
-
-        Kabupaten Banyuwangi
-    </h1>
-</section>
-    
-    <img class="image-hero" src="https://1.bp.blogspot.com/-Oj7HxaO-HvM/XaISxtZkBQI/AAAAAAAAClI/Op8yR6qaX8gyfh1G_eRF9mKC5ZM0rxH-QCLcBGAsYHQ/w1200-h630-p-k-no-nu/Screenshot_1262.jpg"
+    <img class="image-hero" src="https://cdn1-production-images-kly.akamaized.net/YKcL9i5UbPoiDNSepFx-KLdSHkw=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2384526/original/054744900_1539673718-HL.jpg"
     alt="The Northern Coast of Java Tidal FLood"
     width="800"
     >
@@ -72,10 +133,10 @@
         Banyuwangi adalah sebuah wilayah kabupaten di Provinsi Jawa Timur, Indonesia. Ibu kotanya adalah Kecamatan Banyuwangi atau sering disebut Kota Banyuwangi. Kabupaten ini terletak di ujung timur pulau Jawa, di kawasan Tapal Kuda, serta wilayahnya berbatasan dengan Kabupaten Situbondo dan Kabupaten Bondowoso di sebelah utara, Selat Bali (Provinsi Bali) di sebelah timur, Samudera Hindia di sebelah selatan, serta Kabupaten Jember dan Kabupaten Bondowoso di sebelah barat. Kabupaten Banyuwangi merupakan kabupaten terluas di Jawa Timur. Di pesisir Kabupaten Banyuwangi, terdapat Pelabuhan Ketapang, yang merupakan penghubung utama antara Pulau Jawa dengan Pulau Bali (Pelabuhan Gilimanuk).
     </p>
 
-
-<h2 id="sejarah">
+<section class="alert-primary">
+<h3 id="sejarah" >
     
-    Sejarah</h2>
+    Sejarah</h3>
 <p>
     Sejarah Banyuwangi tidak lepas dari sejarah Kerajaan Blambangan. Pada pertengahan abad ke-17, Banyuwangi merupakan bagian dari Kerajaan Hindu Blambangan yang dipimpin oleh Kangjeng Suhunan Prabu Tawang Alun.
 
@@ -92,8 +153,9 @@
     Akhir dari perang ini, VOC-lah yang memperoleh kemenangan dengan diangkatnya R. Wiroguno I (Mas Alit) sebagai Bupati Banyuwangi pertama dan tanda runtuhnya Kerajaan Blambangan. Tetapi perlawanan sporadis rakyat Blambangan masih terjadi meskipun VOC sudah menguasai Blambangan. Itu bisa terlihat dengan tidak adanya pabrik gula yang dibangun oleh VOC saat itu, berbeda dengan kabupaten lainnya di Jawa Timur.[butuh rujukan]
 </p>
 
-
-<h2 id="legenda">Legenda</h2>
+</section>
+<section>
+<h3 id="legenda">Legenda</h3>
 <p>
     Tokoh legenda yang terkenal adalah Putri Sri Tanjung yang di bunuh oleh suaminya di pinggir sungai karena dicurigai oleh suaminya telah selingkuh ketika dia ditinggal menuju medan perang. Dengan sumpah janjinya kepada sang suami sang putri berkata: "Jika darah yang mengalir di sungai ini amis memang Sri Tanjung selingkuh, tetapi jika berbau harum (wangi) maka Sri Tanjung tidak selingkuh". Dan ketika darah yang mengalir ke dalam sungai tersebut berbau wangi, maka menyesallah sang suami yang dikenal sebagai Sidopekso ini.[butuh rujukan]
 
@@ -101,7 +163,29 @@ Harumnya air itulah yang kemudian diyakini sebagai asal mula nama daerah itu seb
 
 Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang memberontak terhadap Kerajaan Majapahit dan dapat ditumpas oleh utusan Majapahit, yaitu Damarwulan. Namun sesungguhnya nama Minak Djinggo tidak ada dalam daftar raja Balambangan menurut Babad Sembar sehingga dapat dipastikan bahwa kisah ini hanya legenda saja.
 </p>
+</section>
+<section>
+    <h3 id="geografi">
+        Geografi
+    </h3>
+    <div class="geo">
+    <span><img src="https://petatematikindo.files.wordpress.com/2014/01/administrasi-bayuwangi-a11.jpg" width="400"></span>
+    <p>
+        
+        Secara geografis Kabupaten Banyuwangi terletak pada koordinat 7º45’15”–8º43’2” LS dan 113º38’10” BT.
 
+Wilayah Kabupaten Banyuwangi cukup beragam, dari dataran rendah hingga pegunungan. 
+ Kawasan perbatasan dengan Kabupaten Bondowoso, terdapat rangkaian Dataran Tinggi Ijen dengan puncaknya Gunung Raung (3.344 m) dan Gunung Merapi (2.799 m). Di balik Gunung Merapi terdapat Gunung Ijen yang terkenal dengan kawahnya. Gunung Raung dan Gunung Ijen adalah gunung api aktif. [9][10]
+
+Bagian selatan terdapat perkebunan, peninggalan sejak zaman Hindia Belanda. Di perbatasan dengan Kabupaten Jember bagian selatan, merupakan kawasan konservasi yang kini dilindungi dalam sebuah cagar alam, yakni Taman Nasional Meru Betiri. Pantai Sukamade merupakan kawasan penangkaran penyu. Di Semenanjung Blambangan juga terdapat cagar alam, yaitu Taman Nasional Alas Purwo.
+
+Pantai timur Banyuwangi yang menghadap ke Selat Bali merupakan salah satu penghasil ikan terbesar di Jawa Timur. Tepatnya di Kecamatan Muncar yaitu pelabuhan perikanan Muncar.
+
+    </p>
+    
+</div>
+</section>
+<section>
 <h3 id="budaya">
     Budaya
 </h3>
@@ -117,9 +201,10 @@ Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang mem
 </div>
 <br/>
 <br/>
-
+</section>
+<section>
 <div >
-    <h2 id="geohidrologi">Geohidrologi</h2>
+    <h3 id="geohidrologi">Geohidrologi</h3>
     <p>
         Beberapa sungai besar maupun kecil yang melintas Kabupaten Banyuwangi mulai dari bagian utara ke selatan sehingga merupakan daerah yang cocok pertanian lahan basah, yaitu meliputi :
     </p>
@@ -195,9 +280,11 @@ Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang mem
         </li>
     </ul>
 </div>
+</section>
 
+<section>
 
-<h2>Lain-lain</h2>
+<h3>Bupati</h3>
 
 <ol>
     <li>
@@ -216,15 +303,18 @@ Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang mem
         5
     </li>
     <li>
-        6
+        Ratna
     </li>
     <li>
-        7
+        Azwar Anas
     </li>
     <li>
-        8
+        Ipuk Festiandani
     </li>
 </ol>
+</section>
+
+<section>
 <div id="tabel">
     <table class="table table-border table-striped">
         <tr>
@@ -313,7 +403,7 @@ Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang mem
             </td>
         </tr>
     </table>
-   
+</section>
     
 
 </div>
