@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.map {
+    width: 200%;
+    height: 100%;
+    background-image: url('your-map-image.jpg'); /* Gantilah dengan URL gambar peta Anda */
+    animation: slideMap 10s linear infinite;
+}
+
+@keyframes slideMap {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
