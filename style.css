@@ -1,115 +1,119 @@
 body {
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
 }
 
+
 .container {
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    position: relative;
-    scroll-behavior: smooth;
-    
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+
 }
 
 
 .container::-webkit-scrollbar {
-    display: none;
-  }
-  
-
-  .container {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
-  }
+  display: none;
+}
 
 
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
-  body {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-  }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .map {
-    width: 200%;
-    height: 100%;
-    background-image: url('your-map-image.jpg'); /* Gantilah dengan URL gambar peta Anda */
-    animation: slideMap 10s linear infinite;
+  width: 200%;
+  height: 100%;
+  background-image: url('your-map-image.jpg');
+  /* Gantilah dengan URL gambar peta Anda */
+  animation: slideMap 10s linear infinite;
 }
 
 @keyframes slideMap {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
-section{
-    padding-top: 50px;
+
+section {
+  padding-top: 50px;
 }
 
 .gallery {
-    display: flex;
-    padding: 2px;
-    transition: .3s;
-  }
-  
-  
-  .gallery__image {
-    filter: grayscale(1);
-  }
-  
-  .gallery__column {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-  }
-  
-  .gallery__link {
-    margin: 2px;
-    overflow: hidden;
-  }
-  
-  .gallery__link:hover .gallery__image {
-    filter: grayscale(0);
-  }
-  
-  .gallery__link:hover .gallery__caption {
-    opacity: 1;
-  }
-  
-  .gallery__thumb {
-    position: relative;
-  }
-  
-  .gallery__image {
-    display: block;
-    width: 100%;
-    transition: .3s;
-  }
-  
-  .gallery__image:hover {
-    transform: scale(1.1);
-    filter: greyscale(0);
-  }
-  
-  
-  .gallery__caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 25px 15px 15px;
-    width: 100%;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    color: white;
-    opacity: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
-    transition: .3s;
-  }
+  display: flex;
+  padding: 2px;
+  transition: .3s;
+}
+
+
+.gallery__image {
+  filter: grayscale(1);
+}
+
+.gallery__column {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.gallery__link {
+  margin: 2px;
+  overflow: hidden;
+}
+
+.gallery__link:hover .gallery__image {
+  filter: grayscale(0);
+}
+
+.gallery__link:hover .gallery__caption {
+  opacity: 1;
+}
+
+.gallery__thumb {
+  position: relative;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  transition: .3s;
+}
+
+.gallery__image:hover {
+  transform: scale(1.1);
+  filter: greyscale(0);
+}
+
+
+.gallery__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px 15px 15px;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: .3s;
+}

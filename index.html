@@ -1,605 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
 
+
+    <style>
         .judul h1 {
-        text-align: center;
-        padding-bottom: 0.7em;
+            text-align: center;
+            padding-bottom: 0.7em;
         }
 
 
 
         .judul h1 span {
-        font-weight: 300;
-        word-spacing: 3px;
-        line-height: 2em;
-        padding-bottom: 0.35em;
-        color: rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+            word-spacing: 3px;
+            line-height: 2em;
+            padding-bottom: 0.35em;
+            color: rgba(0, 0, 0, 0.5);
         }
+
         .judul h1:before {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60px;
-        height: 1px;
-        content: "";
-        left: 50%;
-        margin-left: -30px;
-        background-color: #777;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 1px;
+            content: "";
+            left: 50%;
+            margin-left: -30px;
+            background-color: #777;
         }
 
         h3 {
-        text-align:center;
-        
-        text-transform:uppercase;
-        font-size:26px; letter-spacing:1px;
-        
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 16px 0;
-        grid-gap: 22px;
+            text-align: center;
+
+            text-transform: uppercase;
+            font-size: 26px;
+            letter-spacing: 1px;
+
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: 16px 0;
+            grid-gap: 22px;
         }
 
-        h3:after, h3:before {
-        content: " ";
-        display: block;
-        border-bottom: 2px solid #ccc;
-        background-color:#f8f8f8;
+        h3:after,
+        h3:before {
+            content: " ";
+            display: block;
+            border-bottom: 2px solid #ccc;
+            background-color: #f8f8f8;
         }
-   
-      
+
+
         .sticky-top {
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        body{
+
+        body {
             font-family: 'Poppins', sans-serif;
             padding-top: 5%;
             padding-right: 10%;
             padding-left: 10%;
-            padding-bottom: 10%; ;
+            padding-bottom: 10%;
+            ;
             height: 100%;
-            overflow-y:scroll ;
+            overflow-y: scroll;
         }
-        h1{
+
+        h1 {
             text-align: center;
             font-weight: 800;
         }
-        p{
+
+        p {
             text-align: justify;
         }
-        .author{
+
+        .author {
             text-align: center;
             margin-top: 50px;
             margin-bottom: 50px;
         }
-        .container{
+
+        .container {
             overflow-y: scroll;
         }
-        .image-hero{
-            
+
+        .image-hero {
+
             padding: auto;
             width: 100%;
         }
-        .navbar-brand{
+
+        .navbar-brand {
             padding: 10%;
         }
-        .geo img{
+
+        .geo img {
             width: 100%;
         }
     </style>
     <title>PGWEB Acara 2</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="judul"  >
+    <div class="judul">
         <h1><span>Sunrise of Java,</span> Kabupaten Banyuwangi <em>Jawa Timur</em> Indonesia</h1>
-      </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#beranda">Beranda</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#sejarah"><i class="fa-solid fa-clock-rotate-left"></i> Sejarah<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#legenda"><i class="fa-brands fa-pied-piper-alt"></i>Legenda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#geografi"><i class="fa-solid fa-book-atlas"></i>Geografi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#budaya"><i class="fa-solid fa-person-booth"></i>Budaya</a>
-                </li>
-            </ul>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#beranda">Beranda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center ">
+                    <li class="nav-item active p-3">
+                        <a class="nav-link" href="#sejarah"><i class="fa-solid fa-clock-rotate-left"></i> Sejarah<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#legenda"><i class="fa-brands fa-pied-piper-alt"></i>Legenda</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#geografi"><i class="fa-solid fa-book-atlas"></i>Geografi</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#budaya"><i class="fa-solid fa-person-booth"></i>Budaya</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </nav>
-<div class="container ">
-    
-    <section id="Gallery">
-      
-        <div id="beranda" class="gallery">
-          <div class="gallery__column">
-            <a href="https://images.unsplash.com/photo-1555058170-94d5f5016a2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/00c1oHuQsnI/300x300" alt="Portrait by Fariez Nurkholiq"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Ijen Cratere by Fariez Nurkholiq</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1634033412374-1e417e7ad314?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/M7hLvGKG_Io/300x500" alt="Landscape by Andiko Baskoro"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Just Tree and Her by Andiko Baskoro</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1592063494814-526817a9cfce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/RJAw-reYcRA/300x300" alt="Muncar by Fajar Raihan"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Muncar by Fajar Raihan</figcaption>
-              </figure>
-            </a>
-          </div>
-    
-          <div class="gallery__column">
-            <a href="https://images.unsplash.com/photo-1449480881392-716d0ea24a47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/EFuCATqfblI/300x300" alt="Hugo Matilla"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Trail of Palm by Hugo Matilla</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1588693495725-5c72046dd3c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/vIJwmK5YUqw/300x300" alt="Portrait by Marcel Ardivan"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Taman Gandrung by Marcel Ardivan</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1575703397367-725a44bcc790?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/40w3HuwLM0I/300x500" alt="Portrait by Said Al-Amri"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Traditional Ceiling by Said Al-Amri</figcaption>
-              </figure>
-            </a>
-          </div>
-    
-          <div class="gallery__column">
-            <a href="https://images.unsplash.com/photo-1562133838-03eb3c73a0c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/8DAtPMzl4F8/300x500" alt="Portrait by 
-                Muhammad Hafidh"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Ijen by Muhammad Hafidh</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1634909558454-c3e53cbe6321?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/WprCbhKQlvM/300x300" alt="Landscape by Roberto Rendon"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Pura Luhur Giri Salaka by Roberto Rendon</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1599537382931-6eeb2b5c5029?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/LlygE0SIAhc/300x300" alt="Portrait by julianto saputra"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Pulau Merah by Julianto Saputra</figcaption>
-              </figure>
-            </a>
-          </div>
-    
-          <div class="gallery__column">
-            <a href="https://images.unsplash.com/photo-1655178353433-2e774ba32ff4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/ZJcEtdPFo6s/300x300" alt="Raung by Duls Muhammad"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Raung MT by Duls Muhammad</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://images.unsplash.com/photo-1596389996692-c9a70a9bca46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/2j3nEOWjEwA/300x300" alt="Portrait by Hanandito Adi"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Cows Migration in Baluran by Hanandito Adi</figcaption>
-              </figure>
-            </a>
-    
-            <a href="https://unsplash.com/@cokdewisnu" target="_blank" class="gallery__link">
-              <figure class="gallery__thumb">
-                <img src="https://source.unsplash.com/lDWWDVtbFgM/300x500" alt="Portrait by  Roberto Rendon"
-                  class="gallery__image">
-                <figcaption class="gallery__caption">Alas Purwo by Roberto Rendon</figcaption>
-              </figure>
-            </a>
-          </div>
-        </div>
-      </section>
-    <section>
-    
-    <p>
-        Banyuwangi adalah sebuah wilayah kabupaten di Provinsi Jawa Timur, Indonesia. Ibu kotanya adalah Kecamatan Banyuwangi atau sering disebut Kota Banyuwangi. Kabupaten ini terletak di ujung timur pulau Jawa, di kawasan Tapal Kuda, serta wilayahnya berbatasan dengan Kabupaten Situbondo dan Kabupaten Bondowoso di sebelah utara, Selat Bali (Provinsi Bali) di sebelah timur, Samudera Hindia di sebelah selatan, serta Kabupaten Jember dan Kabupaten Bondowoso di sebelah barat. Kabupaten Banyuwangi merupakan kabupaten terluas di Jawa Timur. Di pesisir Kabupaten Banyuwangi, terdapat Pelabuhan Ketapang, yang merupakan penghubung utama antara Pulau Jawa dengan Pulau Bali (Pelabuhan Gilimanuk).
-    </p>
-    </section>
-    <section class="alert-primary"  id="sejarah" >
-    <h3>
-        
-        Sejarah</h3>
-    <p>
-        Sejarah Banyuwangi tidak lepas dari sejarah Kerajaan Blambangan. Pada pertengahan abad ke-17, Banyuwangi merupakan bagian dari Kerajaan Hindu Blambangan yang dipimpin oleh Kangjeng Suhunan Prabu Tawang Alun.
 
-        Sejak tahun 1743, secara administratif VOC telah menganggap Blambangan sebagai wilayah kekuasannya, atas dasar Perjanjian Ponorogo yang diantara isinya adalah penyerahan kekuasaan Kartasura di Jawa bagian timur (termasuk Blambangan) oleh Pakubuwono II kepada VOC. Padahal Kartasura tidak pernah mewarisi Blambangan dari Kesultanan Mataram karena Kangjeng Suhunan Prabu Tawangalun telah menyatakan kemerdekaan Balambangan pada 23 Pebruari 1653 dan Mataram tidak pernah menundukkannya lagi hingga Mataram hancur akibat Perang Raden Trunajaya.
-        
-        Pasca Perjanjian Ponorogo tahun 1743, VOC tidak pernah benar-benar menancapkan kekuasaannya sampai pada akhir abad ke-17, ketika Perusahaan Hindia Timur Britania menjalin hubungan dagang dengan Blambangan..[8]
-        
-        VOC segera bergerak untuk mengamankan kekuasaannya atas Blambangan pada akhir abad ke-18. Hal ini menyulut perang besar selama lima tahun (1767–1772) dan bahkan baru berakhir tahun 1777.
-        
-        Dalam rangkaian peperangan itu terdapat beberapa pertempuran dahsyat yang salah satunya disebut Perang Puputan Bayu yang merupakan perlawanan rakyat Blambangan untuk melepaskan diri dari belenggu VOC.
-        
-        Pertempuran Puputan Bayu terjadi pada tanggal 18 Desember 1771 yang akhirnya ditetapkan sebagai hari jadi Banyuwangi. Sayangnya, perang ini tidak dikenal luas dalam sejarah perjuangan bangsa Indonesia melawan kompeni Belanda.
-        
-        Akhir dari perang ini, VOC-lah yang memperoleh kemenangan dengan diangkatnya R. Wiroguno I (Mas Alit) sebagai Bupati Banyuwangi pertama dan tanda runtuhnya Kerajaan Blambangan. Tetapi perlawanan sporadis rakyat Blambangan masih terjadi meskipun VOC sudah menguasai Blambangan. Itu bisa terlihat dengan tidak adanya pabrik gula yang dibangun oleh VOC saat itu, berbeda dengan kabupaten lainnya di Jawa Timur.[butuh rujukan]
-    </p>
 
-    </section>
-    <section id="legenda">
-    <h3 >Legenda</h3>
-    <p>
-        Tokoh legenda yang terkenal adalah Putri Sri Tanjung yang di bunuh oleh suaminya di pinggir sungai karena dicurigai oleh suaminya telah selingkuh ketika dia ditinggal menuju medan perang. Dengan sumpah janjinya kepada sang suami sang putri berkata: "Jika darah yang mengalir di sungai ini amis memang Sri Tanjung selingkuh, tetapi jika berbau harum (wangi) maka Sri Tanjung tidak selingkuh". Dan ketika darah yang mengalir ke dalam sungai tersebut berbau wangi, maka menyesallah sang suami yang dikenal sebagai Sidopekso ini.[butuh rujukan]
+    <div class="container ">
 
-    Harumnya air itulah yang kemudian diyakini sebagai asal mula nama daerah itu sebagai Banyuwangi.
+        <section id="Gallery">
 
-    Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang memberontak terhadap Kerajaan Majapahit dan dapat ditumpas oleh utusan Majapahit, yaitu Damarwulan. Namun sesungguhnya nama Minak Djinggo tidak ada dalam daftar raja Balambangan menurut Babad Sembar sehingga dapat dipastikan bahwa kisah ini hanya legenda saja.
-    </p>
-    </section>
-    <section id="geografi">
-        <h3 >
-            Geografi
-        </h3>
-        <div class="geo">
-        <span><img src="https://petatematikindo.files.wordpress.com/2014/01/administrasi-bayuwangi-a11.jpg" ></span>
-        <p>
-            
-            Secara geografis Kabupaten Banyuwangi terletak pada koordinat 7º45’15”–8º43’2” LS dan 113º38’10” BT.
+            <div id="beranda" class="gallery">
+                <div class="gallery__column">
+                    <a href="https://images.unsplash.com/photo-1555058170-94d5f5016a2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/00c1oHuQsnI/300x300"
+                                alt="Portrait by Fariez Nurkholiq" class="gallery__image">
+                            <figcaption class="gallery__caption">Ijen Cratere by Fariez Nurkholiq</figcaption>
+                        </figure>
+                    </a>
 
-    Wilayah Kabupaten Banyuwangi cukup beragam, dari dataran rendah hingga pegunungan. 
-    Kawasan perbatasan dengan Kabupaten Bondowoso, terdapat rangkaian Dataran Tinggi Ijen dengan puncaknya Gunung Raung (3.344 m) dan Gunung Merapi (2.799 m). Di balik Gunung Merapi terdapat Gunung Ijen yang terkenal dengan kawahnya. Gunung Raung dan Gunung Ijen adalah gunung api aktif. [9][10]
+                    <a href="https://images.unsplash.com/photo-1634033412374-1e417e7ad314?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/M7hLvGKG_Io/300x500" alt="Landscape by Andiko Baskoro"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Just Tree and Her by Andiko Baskoro</figcaption>
+                        </figure>
+                    </a>
 
-    Bagian selatan terdapat perkebunan, peninggalan sejak zaman Hindia Belanda. Di perbatasan dengan Kabupaten Jember bagian selatan, merupakan kawasan konservasi yang kini dilindungi dalam sebuah cagar alam, yakni Taman Nasional Meru Betiri. Pantai Sukamade merupakan kawasan penangkaran penyu. Di Semenanjung Blambangan juga terdapat cagar alam, yaitu Taman Nasional Alas Purwo.
+                    <a href="https://images.unsplash.com/photo-1592063494814-526817a9cfce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/RJAw-reYcRA/300x300" alt="Muncar by Fajar Raihan"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Muncar by Fajar Raihan</figcaption>
+                        </figure>
+                    </a>
+                </div>
 
-    Pantai timur Banyuwangi yang menghadap ke Selat Bali merupakan salah satu penghasil ikan terbesar di Jawa Timur. Tepatnya di Kecamatan Muncar yaitu pelabuhan perikanan Muncar.
+                <div class="gallery__column">
+                    <a href="https://images.unsplash.com/photo-1449480881392-716d0ea24a47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/EFuCATqfblI/300x300" alt="Hugo Matilla"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Trail of Palm by Hugo Matilla</figcaption>
+                        </figure>
+                    </a>
 
-        </p>
-    
-        </div>
-    </section>
-    <section id="budaya">
-    <h3 >
-        Budaya
-    </h3>
+                    <a href="https://images.unsplash.com/photo-1588693495725-5c72046dd3c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/vIJwmK5YUqw/300x300" alt="Portrait by Marcel Ardivan"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Taman Gandrung by Marcel Ardivan</figcaption>
+                        </figure>
+                    </a>
 
-    <div class="row text-center">
-        
-        <div class="col-sm">
-            <img src="http://img.beritasatu.com/cache/jakartaglobe/909x605-2/2017/11/banyuwangi-ethno-festival-907x605.jpg" width="400" height="315">
-        </div>
-        <div class="col-sm">
-            <iframe width="400" height="315" src="https://www.youtube.com/embed/mBu_Jj1MP1g?si=Ii4r_Y7D2o_13Enh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+                    <a href="https://images.unsplash.com/photo-1575703397367-725a44bcc790?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/40w3HuwLM0I/300x500" alt="Portrait by Said Al-Amri"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Traditional Ceiling by Said Al-Amri</figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="gallery__column">
+                    <a href="https://images.unsplash.com/photo-1562133838-03eb3c73a0c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/8DAtPMzl4F8/300x500" alt="Portrait by 
+                Muhammad Hafidh" class="gallery__image">
+                            <figcaption class="gallery__caption">Ijen by Muhammad Hafidh</figcaption>
+                        </figure>
+                    </a>
+
+                    <a href="https://images.unsplash.com/photo-1634909558454-c3e53cbe6321?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/WprCbhKQlvM/300x300" alt="Landscape by Roberto Rendon"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Pura Luhur Giri Salaka by Roberto Rendon</figcaption>
+                        </figure>
+                    </a>
+
+                    <a href="https://images.unsplash.com/photo-1599537382931-6eeb2b5c5029?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/LlygE0SIAhc/300x300"
+                                alt="Portrait by julianto saputra" class="gallery__image">
+                            <figcaption class="gallery__caption">Pulau Merah by Julianto Saputra</figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+                <div class="gallery__column">
+                    <a href="https://images.unsplash.com/photo-1655178353433-2e774ba32ff4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/ZJcEtdPFo6s/300x300" alt="Raung by Duls Muhammad"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Raung MT by Duls Muhammad</figcaption>
+                        </figure>
+                    </a>
+
+                    <a href="https://images.unsplash.com/photo-1596389996692-c9a70a9bca46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/2j3nEOWjEwA/300x300" alt="Portrait by Hanandito Adi"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Cows Migration in Baluran by Hanandito Adi</figcaption>
+                        </figure>
+                    </a>
+
+                    <a href="https://unsplash.com/@cokdewisnu" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="https://source.unsplash.com/lDWWDVtbFgM/300x500" alt="Portrait by  Roberto Rendon"
+                                class="gallery__image">
+                            <figcaption class="gallery__caption">Alas Purwo by Roberto Rendon</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <p>
+                Banyuwangi adalah sebuah wilayah kabupaten di Provinsi Jawa Timur, Indonesia. Ibu kotanya adalah
+                Kecamatan Banyuwangi atau sering disebut Kota Banyuwangi. Kabupaten ini terletak di ujung timur pulau
+                Jawa, di kawasan Tapal Kuda, serta wilayahnya berbatasan dengan Kabupaten Situbondo dan Kabupaten
+                Bondowoso di sebelah utara, Selat Bali (Provinsi Bali) di sebelah timur, Samudera Hindia di sebelah
+                selatan, serta Kabupaten Jember dan Kabupaten Bondowoso di sebelah barat. Kabupaten Banyuwangi merupakan
+                kabupaten terluas di Jawa Timur. Di pesisir Kabupaten Banyuwangi, terdapat Pelabuhan Ketapang, yang
+                merupakan penghubung utama antara Pulau Jawa dengan Pulau Bali (Pelabuhan Gilimanuk).
+            </p>
+        </section>
+        <section class="alert-primary" id="sejarah">
+            <h3>
+
+                Sejarah</h3>
+            <p>
+                Sejarah Banyuwangi tidak lepas dari sejarah Kerajaan Blambangan. Pada pertengahan abad ke-17, Banyuwangi
+                merupakan bagian dari Kerajaan Hindu Blambangan yang dipimpin oleh Kangjeng Suhunan Prabu Tawang Alun.
+
+                Sejak tahun 1743, secara administratif VOC telah menganggap Blambangan sebagai wilayah kekuasannya, atas
+                dasar Perjanjian Ponorogo yang diantara isinya adalah penyerahan kekuasaan Kartasura di Jawa bagian
+                timur (termasuk Blambangan) oleh Pakubuwono II kepada VOC. Padahal Kartasura tidak pernah mewarisi
+                Blambangan dari Kesultanan Mataram karena Kangjeng Suhunan Prabu Tawangalun telah menyatakan kemerdekaan
+                Balambangan pada 23 Pebruari 1653 dan Mataram tidak pernah menundukkannya lagi hingga Mataram hancur
+                akibat Perang Raden Trunajaya.
+
+                Pasca Perjanjian Ponorogo tahun 1743, VOC tidak pernah benar-benar menancapkan kekuasaannya sampai pada
+                akhir abad ke-17, ketika Perusahaan Hindia Timur Britania menjalin hubungan dagang dengan
+                Blambangan..[8]
+
+                VOC segera bergerak untuk mengamankan kekuasaannya atas Blambangan pada akhir abad ke-18. Hal ini
+                menyulut perang besar selama lima tahun (1767–1772) dan bahkan baru berakhir tahun 1777.
+
+                Dalam rangkaian peperangan itu terdapat beberapa pertempuran dahsyat yang salah satunya disebut Perang
+                Puputan Bayu yang merupakan perlawanan rakyat Blambangan untuk melepaskan diri dari belenggu VOC.
+
+                Pertempuran Puputan Bayu terjadi pada tanggal 18 Desember 1771 yang akhirnya ditetapkan sebagai hari
+                jadi Banyuwangi. Sayangnya, perang ini tidak dikenal luas dalam sejarah perjuangan bangsa Indonesia
+                melawan kompeni Belanda.
+
+                Akhir dari perang ini, VOC-lah yang memperoleh kemenangan dengan diangkatnya R. Wiroguno I (Mas Alit)
+                sebagai Bupati Banyuwangi pertama dan tanda runtuhnya Kerajaan Blambangan. Tetapi perlawanan sporadis
+                rakyat Blambangan masih terjadi meskipun VOC sudah menguasai Blambangan. Itu bisa terlihat dengan tidak
+                adanya pabrik gula yang dibangun oleh VOC saat itu, berbeda dengan kabupaten lainnya di Jawa
+                Timur.[butuh rujukan]
+            </p>
+
+        </section>
+        <section id="legenda">
+            <h3>Legenda</h3>
+            <p>
+                Tokoh legenda yang terkenal adalah Putri Sri Tanjung yang di bunuh oleh suaminya di pinggir sungai
+                karena dicurigai oleh suaminya telah selingkuh ketika dia ditinggal menuju medan perang. Dengan sumpah
+                janjinya kepada sang suami sang putri berkata: "Jika darah yang mengalir di sungai ini amis memang Sri
+                Tanjung selingkuh, tetapi jika berbau harum (wangi) maka Sri Tanjung tidak selingkuh". Dan ketika darah
+                yang mengalir ke dalam sungai tersebut berbau wangi, maka menyesallah sang suami yang dikenal sebagai
+                Sidopekso ini.[butuh rujukan]
+
+                Harumnya air itulah yang kemudian diyakini sebagai asal mula nama daerah itu sebagai Banyuwangi.
+
+                Tokoh sejarah lain ialah Minak Djinggo, seorang Adipati dari Blambangan yang memberontak terhadap
+                Kerajaan Majapahit dan dapat ditumpas oleh utusan Majapahit, yaitu Damarwulan. Namun sesungguhnya nama
+                Minak Djinggo tidak ada dalam daftar raja Balambangan menurut Babad Sembar sehingga dapat dipastikan
+                bahwa kisah ini hanya legenda saja.
+            </p>
+        </section>
+        <section id="geografi">
+            <h3>
+                Geografi
+            </h3>
+            <div class="geo">
+                <span><img
+                        src="https://petatematikindo.files.wordpress.com/2014/01/administrasi-bayuwangi-a11.jpg"></span>
+                <p>
+
+                    Secara geografis Kabupaten Banyuwangi terletak pada koordinat 7º45’15”–8º43’2” LS dan 113º38’10” BT.
+
+                    Wilayah Kabupaten Banyuwangi cukup beragam, dari dataran rendah hingga pegunungan.
+                    Kawasan perbatasan dengan Kabupaten Bondowoso, terdapat rangkaian Dataran Tinggi Ijen dengan
+                    puncaknya Gunung Raung (3.344 m) dan Gunung Merapi (2.799 m). Di balik Gunung Merapi terdapat Gunung
+                    Ijen yang terkenal dengan kawahnya. Gunung Raung dan Gunung Ijen adalah gunung api aktif. [9][10]
+
+                    Bagian selatan terdapat perkebunan, peninggalan sejak zaman Hindia Belanda. Di perbatasan dengan
+                    Kabupaten Jember bagian selatan, merupakan kawasan konservasi yang kini dilindungi dalam sebuah
+                    cagar alam, yakni Taman Nasional Meru Betiri. Pantai Sukamade merupakan kawasan penangkaran penyu.
+                    Di Semenanjung Blambangan juga terdapat cagar alam, yaitu Taman Nasional Alas Purwo.
+
+                    Pantai timur Banyuwangi yang menghadap ke Selat Bali merupakan salah satu penghasil ikan terbesar di
+                    Jawa Timur. Tepatnya di Kecamatan Muncar yaitu pelabuhan perikanan Muncar.
+
+                </p>
+
+            </div>
+        </section>
+        <section id="budaya">
+            <h3>
+                Budaya
+            </h3>
+
+            <div class="row text-center">
+
+                <div class="col-sm">
+                    <img src="http://img.beritasatu.com/cache/jakartaglobe/909x605-2/2017/11/banyuwangi-ethno-festival-907x605.jpg"
+                        width="400" height="315">
+                </div>
+                <div class="col-sm">
+                    <iframe width="400" height="315" src="https://www.youtube.com/embed/mBu_Jj1MP1g?si=Ii4r_Y7D2o_13Enh"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <br <p>
+            Secara budaya Banyuwangi berada dalam simpul kebudayaan yang beragam, etnis di Banyuwangi berkumpul dan
+            berinteraksi dan meneguhkan sebuah identitas yakni KEBERAGAMAN. masyarakat Osing, Melayu, Bali, Mandar,
+            Madura, Jawa Mataraman adalah representasi keberagaman tersebut. Keberagaman tersebut mebuktikan bahwa
+            Banyuwangi secara kultural bersifat terbuka dan dapat berinterkasi dengan siapapun, secara histori sudah
+            dapat dibuktikan. Keberagaman inilah potret sebuah kebhinekaan yang secara kultural telah diwarisi oleh
+            negeri ini. NUSANTARA dengan segala pemanaafaatan ruang dan lintasan kesejarahan di dalamnya membentuk
+            keanekaragaman yang menarik dan harus dipelihara.
+            </p>
+            <br />
+            <br />
+        </section>
+        <section id="geohidrologi">
+            <div>
+                <h3>Geohidrologi</h3>
+                <p>
+                    Beberapa sungai besar maupun kecil yang melintas Kabupaten Banyuwangi mulai dari bagian utara ke
+                    selatan sehingga merupakan daerah yang cocok pertanian lahan basah, yaitu meliputi :
+                </p>
+                <ul>
+                    <li>
+
+                        Sungai Bajulmati (20 km), melewati Kecamatan Wongsorejo.
+                    </li>
+
+                    <li>
+
+                        Sungai Selogiri (6,173 km), melewati Kecamatan Kalipuro.
+                    </li>
+                    <li>
+                        Sungai Ketapang (10,26 km), melewati Kecamatan Kalipuro.
+
+                    </li>
+                    <li>
+                        Sungai Sukowidi (15,826 km), melewati Kecamatan Kalipuro.
+
+                    </li>
+                    <li>
+                        Sungai Bendo (15,826 km), melewati Kecamatan Glagah.
+
+                    </li>
+                    <li>
+
+                        Sungai Sobo (13,818 km), melewati Kecamatan Banyuwangi dan Glagah.
+                    </li>
+                    <li>
+                        Sungai Pakis (7,043 km), melewati Kecamatan Banyuwangi.
+
+                    </li>
+                    <li>
+                        Sungai Tambong (24,347 km), melewati Kecamatan Glagah dan Kabat.
+
+                    </li>
+                    <li>
+                        Sungai Binau (21,279 km), melewati Kecamatan Rogojampi.
+
+                    </li>
+                    <li>
+
+                        Sungai Bomo (7,417 km), melewati Kecamatan Rogojampi, Srono, dan Muncar.
+                    </li>
+                    <li>
+
+                        Sungai Setail (73,35 km), melewati Kecamatan Sempu, Genteng, Tegalsari, Gambiran, Purwoharjo dan
+                        Muncar.
+                    </li>
+                    <li>
+                        Sungai Porolinggo (30,70 km)melewati Kecamatan Genteng.
+
+                    </li>
+                    <li>
+                        Sungai Kalibarumanis (18 km), melewati Kecamatan Kalibaru dan Glenmore.
+
+                    </li>
+                    <li>
+                        Sungai Wagud (14,60 km), melewati Kecamatan Genteng, Cluring dan Muncar.
+
+                    </li>
+                    <li>
+
+                        Sungai Karangtambak (25 km), melewati Kecamatan Pesanggaran.
+                    </li>
+                    <li>
+                        Sungai Bango (18 km), melewati Kecamatan Bangorejo dan Pesanggaran.
+
+                    </li>
+                    <li>
+
+                        Sungai Baru (80,70 km), melewati Kecamatan Kalibaru, Glenmore, Tegalsari, Siliragung dan
+                        Pesanggaran.[11]
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+
+            <h3>Bupati</h3>
+
+            <ol>
+                <li>
+                    Temenggung Wiroguno I (alias Mas Alit)
+                </li>
+                <li>
+                    Temenggung Wiroguno II
+                    (alias Mas Talib
+                </li>
+                <li>
+                    Temenggung Surenggrono
+                </li>
+                <li>
+                    R.T. Wiro-adinegoro
+                </li>
+                <li>
+                    R.T. Pringgokoesoemo
+                </li>
+                <li>
+                    R.M.T.A. Soegondo
+                </li>
+                <li>
+                    R.T. Astrokoesoemo
+                </li>
+                <li>
+                    R.T.A. Soeringrono
+                </li>
+                <li>
+                    R.T. Pringgokoesoemo
+                </li>
+                <li>
+                    R.T.A. Koesoemonegoro
+                </li>
+                <li>
+                    R.T. Notodiningrat
+                </li>
+                <li>
+                    R.A.A. Mohamad Notoadisoerjo
+                </li>
+                <li>
+                    R.T. Moertadjab Sosroadiningrat
+                </li>
+                <li>
+                    R.T. Achmad Rastiko
+                </li>
+                <li>
+                    R. Oesman Soemodinoto
+                </li>
+                <li>
+                    R. Ahmad Kusumo Negoro
+                </li>
+                <li>
+                    R. Moch. Sachrawisetio
+                </li>
+                <li>
+                    Sukarbi
+                </li>
+                <li>
+                    R. Oesman Soemodinoto
+                </li>
+                <li>
+                    Soegito Noto Soegito
+                </li>
+                <li>
+                    Soewarso Kanapi
+                </li>
+                <li>
+                    Letkol (Purn.)
+                    Djoko Supaat Slamet
+                </li>
+                <li>
+                    Soesilo Suharto, S.H
+                </li>
+                <li>
+                    S. Djoko Wasito
+                </li>
+                <li>
+                    Harwin Wasisto
+                </li>
+                <li>
+                    Kol Pol. (Purn) H
+                    T. Purnomo Sidik
+                </li>
+                <li>
+                    Ir.
+                    Samsul Hadi
+                </li>
+
+                <li>
+                    Abdul Kadir
+
+                </li>
+                <li>
+                    Ratna Ani Lestari
+                    S.E., M.M
+                </li>
+                <li>
+                    Yusuf Nur Iskandar
+                </li>
+                <li>
+                    Abdullah Azwar Anas
+                </li>
+                <li>
+                    Ipuk Festiandani
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <div id="tabel">
+                <table class="table table-border table-striped">
+                    <tr>
+                        <th>
+                            Kolom pertama
+                        </th>
+                        <th>
+                            Kolom kedua
+                        </th>
+                        <th>
+                            Kolom ketiga
+                        </th>
+                        <th>
+                            Kolom keempat
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            Data 1
+                        </td>
+                        <td>
+                            Data 2
+                        </td>
+                        <td>
+                            Data 3
+                        </td>
+                        <td>
+                            Data 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Data 1
+                        </td>
+                        <td>
+                            Data 2
+                        </td>
+                        <td>
+                            Data 3
+                        </td>
+                        <td>
+                            Data 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Data 1
+                        </td>
+                        <td>
+                            Data 2
+                        </td>
+                        <td>
+                            Data 3
+                        </td>
+                        <td>
+                            Data 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Data 1
+                        </td>
+                        <td>
+                            Data 2
+                        </td>
+                        <td>
+                            Data 3
+                        </td>
+                        <td>
+                            Data 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Data 1
+                        </td>
+                        <td>
+                            Data 2
+                        </td>
+                        <td>
+                            Data 3
+                        </td>
+                        <td>
+                            Data 4
+                        </td>
+                    </tr>
+                </table>
+        </section>
+
+
     </div>
-    <br
-    <p>
-        Secara budaya Banyuwangi berada dalam simpul kebudayaan yang beragam, etnis di Banyuwangi berkumpul dan berinteraksi dan meneguhkan sebuah identitas yakni KEBERAGAMAN. masyarakat Osing, Melayu, Bali, Mandar, Madura, Jawa Mataraman adalah representasi keberagaman tersebut. Keberagaman tersebut mebuktikan bahwa Banyuwangi secara kultural bersifat terbuka dan dapat berinterkasi dengan siapapun, secara histori sudah dapat dibuktikan. Keberagaman inilah potret sebuah kebhinekaan yang secara kultural telah diwarisi oleh negeri ini. NUSANTARA dengan segala pemanaafaatan ruang dan lintasan kesejarahan di dalamnya membentuk keanekaragaman yang menarik dan harus dipelihara.
-    </p>
-    <br/>
-    <br/>
-    </section>
-    <section id="geohidrologi">
-    <div >
-        <h3 >Geohidrologi</h3>
-        <p>
-            Beberapa sungai besar maupun kecil yang melintas Kabupaten Banyuwangi mulai dari bagian utara ke selatan sehingga merupakan daerah yang cocok pertanian lahan basah, yaitu meliputi :
-        </p>
-        <ul>
-            <li>
-                
-                Sungai Bajulmati (20 km), melewati Kecamatan Wongsorejo.
-            </li>
-            
-            <li>
-                
-                Sungai Selogiri (6,173 km), melewati Kecamatan Kalipuro.
-            </li>
-            <li>
-                Sungai Ketapang (10,26 km), melewati Kecamatan Kalipuro.
-                
-            </li>
-            <li>
-                Sungai Sukowidi (15,826 km), melewati Kecamatan Kalipuro.
-                
-            </li>
-            <li>
-                Sungai Bendo (15,826 km), melewati Kecamatan Glagah.
-                
-            </li>
-            <li>
-                
-                Sungai Sobo (13,818 km), melewati Kecamatan Banyuwangi dan Glagah.
-            </li>
-            <li>
-                Sungai Pakis (7,043 km), melewati Kecamatan Banyuwangi.
-                
-            </li>
-            <li>
-                Sungai Tambong (24,347 km), melewati Kecamatan Glagah dan Kabat.
-                
-            </li>
-            <li>
-                Sungai Binau (21,279 km), melewati Kecamatan Rogojampi.
-        
-            </li>
-            <li>
-        
-                Sungai Bomo (7,417 km), melewati Kecamatan Rogojampi, Srono, dan Muncar.
-            </li>
-            <li>
-        
-                Sungai Setail (73,35 km), melewati Kecamatan Sempu, Genteng, Tegalsari, Gambiran, Purwoharjo dan Muncar.
-            </li>
-            <li>
-                Sungai Porolinggo (30,70 km)melewati Kecamatan Genteng.
-        
-            </li>
-            <li>
-                Sungai Kalibarumanis (18 km), melewati Kecamatan Kalibaru dan Glenmore.
-        
-            </li>
-            <li>
-                Sungai Wagud (14,60 km), melewati Kecamatan Genteng, Cluring dan Muncar.
-                
-            </li>
-            <li>
 
-                Sungai Karangtambak (25 km), melewati Kecamatan Pesanggaran.
-            </li>
-            <li>
-                Sungai Bango (18 km), melewati Kecamatan Bangorejo dan Pesanggaran.
-
-            </li>
-            <li>
-
-                Sungai Baru (80,70 km), melewati Kecamatan Kalibaru, Glenmore, Tegalsari, Siliragung dan Pesanggaran.[11]
-            </li>
-        </ul>
     </div>
-    </section>
 
-    <section>
-
-    <h3>Bupati</h3>
-
-    <ol>
-        <li>
-            Temenggung Wiroguno I (alias Mas Alit)
-        </li>
-        <li>
-            Temenggung Wiroguno II
-(alias Mas Talib
-        </li>
-        <li>
-            Temenggung Surenggrono
-        </li>
-        <li>
-            R.T. Wiro-adinegoro
-        </li>
-        <li>
-            R.T. Pringgokoesoemo
-        </li>
-        <li>
-            R.M.T.A. Soegondo
-        </li>
-        <li>
-            R.T. Astrokoesoemo
-        </li>
-        <li>
-            R.T.A. Soeringrono
-        </li>
-        <li>
-            R.T. Pringgokoesoemo
-        </li>
-        <li>
-            R.T.A. Koesoemonegoro
-        </li>
-        <li>
-            R.T. Notodiningrat
-        </li>
-        <li>
-            R.A.A. Mohamad Notoadisoerjo
-        </li>
-        <li>
-            R.T. Moertadjab Sosroadiningrat
-        </li>
-        <li>
-            R.T. Achmad Rastiko
-        </li>
-        <li>
-            R. Oesman Soemodinoto
-        </li>
-        <li>
-            R. Ahmad Kusumo Negoro
-        </li>
-        <li>
-            R. Moch. Sachrawisetio
-        </li>
-        <li>
-            Sukarbi
-        </li>
-        <li>
-            R. Oesman Soemodinoto
-        </li>
-        <li>
-            Soegito Noto Soegito
-        </li>
-        <li>
-            Soewarso Kanapi
-        </li>
-        <li>
-            Letkol (Purn.)
-Djoko Supaat Slamet
-        </li>
-        <li>
-            Soesilo Suharto, S.H
-        </li>
-        <li>
-            S. Djoko Wasito
-        </li>
-        <li>
-            Harwin Wasisto
-        </li>
-        <li>
-            Kol Pol. (Purn) H
-T. Purnomo Sidik
-        </li>
-        <li>
-            Ir.
-Samsul Hadi
-        </li>
-
-        <li>
-            Abdul Kadir	
-
-        </li>
-        <li>
-            Ratna Ani Lestari
-S.E., M.M
-        </li>
-        <li>
-            Yusuf Nur Iskandar
-        </li>
-        <li>
-            Abdullah Azwar Anas
-        </li>
-        <li>
-            Ipuk Festiandani
-        </li>
-    </ol>
-    </section>
-
-    <section>
-    <div id="tabel">
-        <table class="table table-border table-striped">
-            <tr>
-                <th>
-                    Kolom pertama
-                </th>
-                <th>
-                    Kolom kedua
-                </th>
-                <th>
-                    Kolom ketiga
-                </th>
-                <th>
-                    Kolom keempat
-                </th>
-                
-            </tr>
-            <tr>
-                <td>
-                    Data 1
-                </td>
-                <td>
-                    Data 2
-                </td>
-                <td>
-                    Data 3
-                </td>
-                <td>
-                    Data 4
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Data 1
-                </td>
-                <td>
-                    Data 2
-                </td>
-                <td>
-                    Data 3
-                </td>
-                <td>
-                    Data 4
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Data 1
-                </td>
-                <td>
-                    Data 2
-                </td>
-                <td>
-                    Data 3
-                </td>
-                <td>
-                    Data 4
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Data 1
-                </td>
-                <td>
-                    Data 2
-                </td>
-                <td>
-                    Data 3
-                </td>
-                <td>
-                    Data 4
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Data 1
-                </td>
-                <td>
-                    Data 2
-                </td>
-                <td>
-                    Data 3
-                </td>
-                <td>
-                    Data 4
-                </td>
-            </tr>
-        </table>
-    </section>
-    
-
-</div>
-
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
